@@ -2,7 +2,8 @@
 
 // Declare app level module which depends on views, and components
 var app = angular.module('goCenter', [
-    'ui.router'
+    'ui.router',
+    'ui.materialize'
 ]);
 
 app.config(['$urlRouterProvider', '$stateProvider', '$locationProvider', function ($urlRouterProvider, $stateProvider, $locationProvider) {
@@ -17,19 +18,19 @@ app.config(['$urlRouterProvider', '$stateProvider', '$locationProvider', functio
         controller: 'adminCtrl'
     }, adminOrderManagerState = {
         name: 'adminOrderManager',
-        url: '/admin/orders',
+        url: '/orders',
         templateUrl: 'components/admin/orderManager/admin.orderManager.view.html',
         controller: 'adminOrderManagerCtrl',
         parent: 'admin'
     }, adminProductManagerState = {
         name: 'adminProductManager',
-        url: '/admin/products',
+        url: '/products',
         templateUrl: 'components/admin/productManager/admin.productManager.view.html',
         controller: 'adminProductManagerCtrl',
         parent: 'admin'
     }, adminPromotionManagerState = {
         name: 'adminPromotionManager',
-        url: '/admin/promotions',
+        url: '/promotions',
         templateUrl: 'components/admin/promotionManager/admin.promotionManager.view.html',
         controller: 'adminPromotionManagerCtrl',
         parent: 'admin'
