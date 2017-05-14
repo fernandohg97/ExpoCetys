@@ -3,7 +3,8 @@
 // Declare app level module which depends on views, and components
 var app = angular.module('goCenter', [
     'ui.router',
-    'ui.materialize'
+    'ui.materialize',
+    'ngMap'
 ]);
 
 app.config(['$urlRouterProvider', '$stateProvider', '$locationProvider', function ($urlRouterProvider, $stateProvider, $locationProvider) {

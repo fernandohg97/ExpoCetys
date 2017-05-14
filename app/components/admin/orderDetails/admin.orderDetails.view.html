@@ -1,10 +1,71 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+<div id="order_details_modal" class="modal">
+    <div class="modal-content">
+        <h4>Detalles de Orden</h4>
 
-</body>
-</html>
+        <div class="row">
+            <form class="col s12">
+                <div class="row">
+                    <div class="input-field col s12 m6">
+                        <input id="client_full_name" disabled ng-model="orderModel.client.fullName" type="text"/>
+                        <label for="client_full_name">Nombre Completo</label>
+                    </div>
+                    <div class="input-field col s12 m6">
+                        <input id="order_date" disabled ng-model="orderModel.client.formattedAddress" type="text"/>
+                        <label for="order_date">Fecha</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12 m6">
+                        <textarea id="client_address" ng-model="order.client.formattedAddress"></textarea>
+                        <label for="client_address">Dirección</label>
+                    </div>
+                    <div class="col s12 m6">
+                        <!-- Map -->
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12 m6">
+                        <select id="order_status" ng-model="orderModel.status"
+                                ng-options="option.name for option in orderStatusOptions"></select>
+                        <label for="order_status">Estadio</label>
+                    </div>
+                    <div class="input-field col s12 m6">
+                        <input id="order_delivery_date" input-date
+                               ng-model="orderModel.deliveryDate"
+                               format="dd/mm/yyyy" type="text"/>
+                        <label for="order_delivery_date">Estado</label>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="row">
+            <h5>Productos</h5>
+            <table>
+                <thead>
+                <tr>
+                    <td>#</td>
+                    <td>Nombre</td>
+                    <td>Precio</td>
+                    <td>Cantidad</td>
+                    <td>Subtotal</td>
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="detail in oderModel.details">
+                    <td>{{detail.product._id}}</td>
+                    <td>{{detail.product.name}}</td>
+                    <td>{{detail.product.unitPrice}}</td>
+                    <td>{{detail.subTotal}}</td>
+                </tr>
+                <tr>
+                    <td colspan="3"><h6>Total</h6></td>
+                    <td>{{orderModel.total}}</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <a href="#" class="modal-action modal-close waves-effect waves-green btn-flat">Aceptar</a>
+    </div>
+</div>

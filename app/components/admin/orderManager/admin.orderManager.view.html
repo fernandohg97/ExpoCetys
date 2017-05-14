@@ -1,1 +1,113 @@
-ORDER MANAGER
+<div>
+    <div class="row">
+        <form class="col s12">
+            <div class="row">
+                <div class="input-field col s12 m6">
+                    <i class="mdi mdi-magnify prefix"></i>
+                    <input id="search_input" type="text" class="validate" ng-model="searchQuery">
+                    <label for="search_input">Buscar</label>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12 m6">
+                        <select id="sort_select" ng-model="sortType" material-select watch
+                                ng-options="option.name for option in sortOptions">
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <table class="highlight">
+        <thead>
+        <tr>
+            <th>Fecha</th>
+            <th>Estado</th>
+            <th>Cliente</th>
+            <th>Total</th>
+            <th>Fecha de Entrega</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-click="showOrderModal(order)"
+            ng-repeat="order in orders  | orderBy:sortType.property | filter:searchQuery">
+            <td>{{order.orderDate | date:'dd/MM/yyyy'}}</td>
+            <td>{{order.status.name}}</td>
+            <td>{{order.client.fullName}}</td>
+            <td>{{order.total}}</td>
+            <td>{{order.deliveryDate | date:'dd/MM/y'}}</td>
+        </tr>
+        </tbody>
+    </table>
+
+    <a hidden data-target="order_details_modal" modal open="openModal"></a>
+</div>
+
+<div id="order_details_modal" class="modal">
+    <div class="modal-content">
+        <h4>Detalles de Orden</h4>
+        <div class="row">
+            <form class="col s12">
+                <div class="row">
+                    <div class="input-field col s12 m6">
+                        <input id="client_full_name" disabled ng-model="selectedOrder.client.fullName" type="text"/>
+                        <label for="client_full_name">Nombre Completo</label>
+                    </div>
+                    <div class="input-field col s12 m6">
+                        <input id="order_date" disabled ng-model="selectedOrder.orderDate | date:'dd/MM/y'"
+                               type="text"/>
+                        <label for="order_date">Fecha</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12 m6">
+                        <textarea disabled id="client_address" ng-model="order.client.formattedAddress"
+                                  class="materialize-textarea"></textarea>
+                        <label for="client_address">Dirección</label>
+                    </div>
+                    <div class="col s12 m6">
+                        <!-- Map -->
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12 m6">
+                        <select id="order_status" ng-model="selectedOrder.status" material-select watch
+                                ng-options="option.name for option in orderStatusOptions"></select>
+                        <label for="order_status">Estado</label>
+                    </div>
+                    <div class="input-field col s12 m6">
+                        <input id="order_delivery_date" input-date
+                               ng-model="selectedOrder.deliveryDate"
+                               format="dd/mm/yyyy" type="text"/>
+                        <label for="order_delivery_date">Fecha de Entrega</label>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="row">
+            <h5>Productos</h5>
+            <table>
+                <thead>
+                <tr>
+                    <td>#</td>
+                    <td>Nombre</td>
+                    <td>Precio</td>
+                    <td>Cantidad</td>
+                    <td>Subtotal</td>
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="detail in selectedOrder.details">
+                    <td>{{detail.product._id}}</td>
+                    <td>{{detail.product.name}}</td>
+                    <td>{{detail.product.unitPrice}}</td>
+                    <td>{{detail.subTotal}}</td>
+                </tr>
+                <tr>
+                    <td colspan="3"><h5>Total</h5></td>
+                    <td>{{selectedOrder.total}}</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

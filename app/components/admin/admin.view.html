@@ -10,17 +10,19 @@
             <li><a ui-sref="adminPromotionManager">Promociones</a>
         </ul>
         <ul class="side-nav" id="nav-mobile">
-            <li><a ui-sref="admin" class="waves-effect"><i class="material-icons">dashboard</i> Inicio</a></li>
-            <li><a ui-sref="adminOrderManager" class="waves-effect"><i class="material-icons">shopping_cart</i> Ordenes</a>
+            <li><a ui-sref="admin" class="waves-effect"><i class="mdi mdi-view-dashboard"></i> Inicio</a></li>
+            <li><a ui-sref="adminOrderManager" class="waves-effect"><i class="mdi mdi-shopping"></i>
+                Ordenes</a>
             </li>
-            <li><a ui-sref="adminProductManager" class="waves-effect"><i class="material-icons">shopping_cart</i>
+            <li><a ui-sref="adminProductManager" class="waves-effect"><i class="mdi mdi-package-variant-closed"></i>
                 Productos</a></li>
-            <li><a ui-sref="adminPromotionManager" class="waves-effect"><i class="material-icons">shopping_cart</i>
+            <li><a ui-sref="adminPromotionManager" class="waves-effect"><i class="mdi mdi-sale"></i>
                 Promociones</a>
         </ul>
     </div>
 </nav>
 
-<div>
-    <div ui-view></div>
+<div class="container">
+    <div ui-view>
+    </div>
 </div>
