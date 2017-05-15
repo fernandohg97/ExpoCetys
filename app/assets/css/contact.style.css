@@ -1,0 +1,48 @@
+/* Section 1 */
+.section1 {
+  background-image: url("../images/fondo.contacto.png");
+  background-size: 100% 100%;
+  height: 800px;
+}
+.form-title {
+  box-sizing: border-box;
+  margin-top: 40px;
+  padding: 12px;
+}
+.form-title h3 {
+  color: #ffffff;
+  margin: 0 auto;
+  font-family: "Lato";
+  letter-spacing: 5px;
+}
+.formTitle {
+  background: red; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(left, rgba(182, 55, 55, 0.88), rgba(79, 34, 34, 0.15)); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(right, rgba(182, 55, 55, 0.88), rgba(79, 34, 34, 0.15)); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(right, rgba(182, 55, 55, 0.88), rgba(79, 34, 34, 0.15)); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to right, rgba(182, 55, 55, 0.88), rgba(79, 34, 34, 0.15)); /* Standard syntax */
+  padding: 10px;
+}
+.text-label {
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: bolder;
+}
+.contactForm {
+  margin-top: 30px;
+}
+.name-input, .lastname-input, .email-input, .message-input {
+  background-color: #ececec;
+}
+.submit-btn {
+  background-color: #cedc41;
+  color: #000000;
+  font-size: 18px;
+  border-radius: 10px;
+  padding: 10px 20px;
+}
+@media screen and (max-width: 39.99em) {
+  .text-label {
+    font-size: 15px;
+  }
+}
