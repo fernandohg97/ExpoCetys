@@ -14,7 +14,10 @@
     "angular-ui-router": "^1.0.3",
     "angular-materialize": "^0.2.2",
     "materialize": "^0.98.2",
-    "foundation": "^5.5.3"
+    "foundation": "^5.5.3",
+    "classie": "^1.0.1",
+    "ngmap": "^1.18.4",
+    "angular-css": "^1.0.8"
   },
   "resolutions": {
     "materialize": "~0.97.8"
