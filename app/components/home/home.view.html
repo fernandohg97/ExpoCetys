@@ -1,0 +1,180 @@
+<link rel="stylesheet" href="foundation.css"/>
+
+<!-- mobile nav bar -->
+<div class="title-bar topbar-center-logo-mobile" data-responsive-toggle="topbar-center-logo" data-hide-for="medium">
+    <div class="title-bar-left">
+        <div class="title-bar-title"><img src="../../assets/img/logoSmall.png" alt=""/></div>
+    </div>
+    <div class="title-bar-right">
+        <button class="menu-icon" type="button" data-toggle="topbar-center-logo"></button>
+    </div>
+</div>
+<!-- /mobile nav bar -->
+
+<!-- medium and larger nav bar -->
+<div class="top-bar topbar-center-logo" id="topbar-center-logo">
+    <div class="top-bar-left">
+        <ul class="menu vertical medium-horizontal">
+            <li><a href="#">PRODUCTOS</a></li>
+            <li><a href="#">SUCURSALES</a></li>
+        </ul>
+    </div>
+    <div class="align-right top-bar-center">
+        <img id="brand-logo" src="../../assets/img/logo.png" alt=""/>
+    </div>
+    <div class="top-bar-right">
+        <ul class="menu vertical medium-horizontal">
+            <li><a href="#">CONTACTO</a></li>
+            <li><a href="#">PROMOCIONES</a></li>
+        </ul>
+    </div>
+</div>
+<!-- /medium and larger nav bar -->
+
+
+<!-- Carousel principal-->
+<div class="orbit" role="region" aria-label="Favorite Space Pictures" data-orbit>
+    <ul class="orbit-container">
+        <button class="orbit-previous" aria-label="previous"><span class="show-for-sr">Previous Slide</span>&#9664;
+        </button>
+        <button class="orbit-next" aria-label="next"><span class="show-for-sr">Next Slide</span>&#9654;</button>
+        <li class="orbit-slide">
+
+            <div class="orbit-caption">
+                <p id="id1"> La diferencia entre</p>
+                <article id="rect1"></article>
+                <article id="rect2"></article>
+                <article id="rect3"></article>
+                <article id="rect4"></article>
+                <p id="id3"> QUERER</p>
+                <p id="id2"> Y </p>
+                <p id="id4"> PODER </p>
+
+            </div>
+            <img src="../../assets/img/home1610.jpg">
+        </li>
+        <li class="orbit-slide">
+            <img src="../../assets/img/promoHome.jpg">
+        </li>
+    </ul>
+</div>
+
+<!-- Finaliza carousel principal-->
+
+
+<!-- fit Lovers-->
+<div class="orbit">
+    <img src="../../assets/img/home2-1610.jpg">
+    <img class="hexDad hexBig" src="../../asse../../assets/img/bigHexagon.png">
+    <img class="hexDad hex1" src="../../asse../../assets/img/hexOne.png">
+    <img class="hexDad hex2" src="../../asse../../assets/img/hexTwo.png">
+    <img class="hexDad hex3" src="../../asse../../assets/img/hexThree.png">
+    <img class="hexDad hex4" src="../../asse../../assets/img/hexFour.png">
+    <img class="hexDad hex5" src="../../asse../../assets/img/hexFive.png">
+
+    <div class="">
+        <img id="repeatLogo" src="../../asse../../assets/img/logo.png">
+    </div>
+    <ul class="menu vertical">
+        <li>
+            <i id="moneyIcon" class="material-icons" style="font-size:60px;color:white;">attach_money</i>
+        </li>
+        <li>
+            <i id="shipIcon" class="material-icons" style="font-size:60px;color:white;">local_shipping</i>
+        </li>
+        <li>
+            <i id="gradeIcon" class="material-icons" style="font-size:60px;color:white;">grade</i>
+        </li>
+
+    </ul>
+
+    <ul class="menu vertical">
+        <li>
+            <h3 class="reasons ar1"> Precios accesibles </h3>
+        </li>
+        <li>
+            <h3 class="reasons ar2"> Envíos a todo México </h3>
+
+        </li>
+        <li>
+            <h3 class="reasons ar3"> Lorem Ipsum </h3>
+        </li>
+    </ul>
+    <button id="btnUbictn" class="button secondary"> CREAR CUENTA</button>
+</div>
+<!-- End fit Lovers-->
+
+
+<!-- Catalogo-->
+<div class="orbit" role="region" aria-label="Favorite Space Pictures" data-orbit>
+    <ul class="orbit-container">
+        <button class="orbit-previous" aria-label="previous"><span class="show-for-sr">Previous Slide</span>&#9664;
+        </button>
+        <button class="orbit-next" aria-label="next"><span class="show-for-sr">Next Slide</span>&#9654;</button>
+
+        <li class="orbit-slide">
+
+            <img src="../../assets/img/bckgrundCatalgo.jpg">
+            <div class="orbit-caption row">
+                <div class="medium-6 columns medium-push-6">
+                    <ul class="menu vertical">
+                        <li>
+                            <h2> VISITA NUESTRO </h2>
+                        </li>
+                        <li>
+                            <h1 catlSiz> CATÁLOGO </h1>
+                        </li>
+                        <li>
+                            <button class="button primary"> Ir ahora</button>
+                        </li>
+                    </ul>
+                </div>
+                <div class="medium-6 columns medium-pull-6">
+                    <img src="../../assets/img/cataImage.png">
+                </div>
+            </div>
+
+        </li>
+        <li class="orbit-slide">
+            <img src="http://placehold.it/2000x750">
+        </li>
+    </ul>
+</div>
+
+<div class="promo-hero promo-hero-bg-image">
+    <div class="promo-hero-content">
+        <h3 class="promo-hero-title">CONOCE NUESTRAS SUCURSALES</h3>
+        <p class="promo-hero-description hide-for-small-only">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Nunc tortor ante, varius eget lacinia porta, faucibus ut eros. Donec quis dui id felis pharetra
+            fermentum.</p>
+        <div class="promo-hero-ctas">
+            <a href="#" class="promo-section-cta button white-hollow"> Ver m&aacute;s </a>
+        </div>
+    </div>
+</div>
+<script src="../js/classie.js"></script>
+<script>
+    function init() {
+        window.addEventListener('scroll', function (e) {
+            var distanceY = window.pageYOffset || document.documentElement.scrollTop,
+                shrinkOn = 300,
+                header = document.querySelector("headerFixed");
+            if (distanceY > shrinkOn) {
+                classie.add(header, "smaller");
+            } else {
+                if (classie.has(header, "smallerhdrFixd")) {
+                    classie.remove(header, "smallerhdrFixd");
+                }
+            }
+        });
+    }
+    window.onload = init();
+</script>
+
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="http://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.js"></script>
+<script>
+    $(document).foundation();
+</script>
+</body>
+</html>

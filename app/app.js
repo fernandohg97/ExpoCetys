@@ -35,11 +35,16 @@ app.config(['$urlRouterProvider', '$stateProvider', '$locationProvider', functio
         templateUrl: 'components/admin/promotionManager/admin.promotionManager.view.html',
         controller: 'adminPromotionManagerCtrl',
         parent: 'admin'
+    }, homeState = {
+        name: 'home',
+        url: '/',
+        templateUrl: './components/home/home.view.html'
     };
 
     $stateProvider.state(adminState);
     $stateProvider.state(adminOrderManagerState);
     $stateProvider.state(adminProductManagerState);
     $stateProvider.state(adminPromotionManagerState);
+    $stateProvider.state(homeState);
 
 }]);

@@ -42,11 +42,33 @@
 <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
 <script src="bower_components/angular-materialize/src/angular-materialize.js"></script>
 <script src="bower_components/materialize/dist/js/materialize.min.js"></script>
+<script src="bower_components/foundation/js/foundation.min.js"></script>
+<script src="bower_components/classie/classie.js"></script>
 <script src="bower_components/ngmap/app.js"></script>
 <script src="app.js"></script>
 <script src="components/admin/admin.controller.js"></script>
 <script src="components/admin/dashboard/admin.dashboard.controller.js"></script>
 <script src="components/admin/orderManager/admin.orderManager.controller.js"></script>
 <script src="components/admin/orderDetails/admin.orderDetails.directive.js"></script>
+
+<script>
+    function init() {
+        window.addEventListener('scroll', function (e) {
+            var distanceY = window.pageYOffset || document.documentElement.scrollTop,
+                shrinkOn = 300,
+                header = document.querySelector("headerFixed");
+            if (distanceY > shrinkOn) {
+                classie.add(header, "smaller");
+            } else {
+                if (classie.has(header, "smallerhdrFixd")) {
+                    classie.remove(header, "smallerhdrFixd");
+                }
+            }
+        });
+    }
+    window.onload = init();
+    $(document).foundation();
+</script>
+
 </body>
 </html>
