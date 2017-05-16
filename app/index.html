@@ -45,6 +45,7 @@
 <script src="bower_components/foundation/js/foundation.min.js"></script>
 <script src="bower_components/classie/classie.js"></script>
 <script src="bower_components/ngmap/app.js"></script>
+<script src="bower_components/angular-css/angular-css.min.js"></script>
 <script src="app.js"></script>
 <script src="components/admin/admin.controller.js"></script>
 <script src="components/admin/dashboard/admin.dashboard.controller.js"></script>
@@ -52,9 +53,10 @@
 <script src="components/admin/orderDetails/admin.orderDetails.directive.js"></script>
 
 <script>
+    $(document).foundation();
     function init() {
         window.addEventListener('scroll', function (e) {
-            var distanceY = window.pageYOffset || document.documentElement.scrollTop,
+            const distanceY = window.pageYOffset || document.documentElement.scrollTop,
                 shrinkOn = 300,
                 header = document.querySelector("headerFixed");
             if (distanceY > shrinkOn) {
@@ -67,7 +69,6 @@
         });
     }
     window.onload = init();
-    $(document).foundation();
 </script>
 
 </body>

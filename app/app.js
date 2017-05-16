@@ -3,9 +3,9 @@
 // Declare app level module which depends on views, and components
 var app = angular.module('goCenter', [
     'ui.router',
-    'ui.materialize'
+    'ui.materialize',
+    'angularCSS'
 ]);
-
 
 app.config(['$urlRouterProvider', '$stateProvider', '$locationProvider', function ($urlRouterProvider, $stateProvider, $locationProvider) {
     $urlRouterProvider.otherwise('/admin');
@@ -38,7 +38,8 @@ app.config(['$urlRouterProvider', '$stateProvider', '$locationProvider', functio
     }, homeState = {
         name: 'home',
         url: '/',
-        templateUrl: './components/home/home.view.html'
+        templateUrl: './components/home/home.view.html',
+        css: './components/home/foundation.css'
     }, productCatalogState = {
         name: 'productCatalog',
         url: '/products',
