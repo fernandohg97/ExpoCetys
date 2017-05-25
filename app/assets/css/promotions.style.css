@@ -1,0 +1,38 @@
+body {
+  background-image: url("../img/fondo.png");
+  background-size: cover;
+  font-family: "Lato", sans-serif !important;
+}
+
+/******* Buttons *********/
+.btnFont{
+    font-size: 0.9rem;
+}
+/******* /buttons *********/
+
+.titlePromo{
+    background-color: #cedc42;
+    margin-top: 50px;
+}
+
+.titleSep{
+    padding-left: 25px;
+}
+
+.pPromo{
+    color: black;
+}
+
+/*.bdyImage{
+    background-image: url('../img/fondoestesi.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}*/
+
+.colrFnt{
+    color: black;
+}
+.promotion {
+  background-color: #ffffff;
+}

@@ -1,3 +1,9 @@
+body {
+  background-image: url("../img/fondo.png");
+  background-size: cover;
+  font-family: "Lato", sans-serif;
+}
+
 /* Small only */
 @media screen and (max-width: 39.99em) {
   .cart-button {
@@ -20,7 +26,7 @@
     left: 0;
     right:0;
     margin: auto;
-    margin-top: 1600px;
+    margin-top: 1690px;
   }
 }
 /* Medium and up */
@@ -51,7 +57,7 @@
     left: 0;
     right:0;
     margin: auto;
-    margin-top: 900px;
+    margin-top: 940px;
   }
 }
 /* Medium only */
@@ -81,7 +87,7 @@
     left: 0;
     right:0;
     margin: auto;
-    margin-top: 945px;
+    margin-top: 990px;
   }
 }
 
@@ -116,7 +122,9 @@
 }
 .main-product {
   display: block;
-  margin: 25px auto;
+  margin: 20px auto;
+  width: 400px;
+  height: 570px;
 }
 .card {
   margin-top: 60px;
@@ -148,6 +156,7 @@
   position: absolute;
   top: 140px;
   margin-left: 20px;
+  width: 80px;
 }
 .cart-button {
   position: absolute;
@@ -167,19 +176,31 @@
 }
 /* Section 2 */
 .section2{
-  background-color: #aa0000;
+  background-image: url('../img/fondo.producto.png');
+  background-position: center;
+  background-size: cover;
 }
 .title2 {
-  margin: auto;
-  padding: 50px 0 20px;
+  margin-top: 150px;
   text-align: center;
   font-size: 40px;
   color: #ffffff;
+  margin-bottom: 0;
+}
+
+/*.bloque{
+  margin: auto;
+}*/
+.small-logo {
+  width: 60px;
+  height: 70px;
 }
 .image {
   background-color: #b8b8b8;
   display: block;
   margin: 25px auto;
+  width: 250px;
+  height: 370px;
 }
 .column-block h5, .column-block p {
   text-align: center;

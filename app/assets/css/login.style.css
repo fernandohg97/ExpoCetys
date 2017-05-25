@@ -1,0 +1,22 @@
+label {
+  padding: 0;
+  margin: 0 15px;
+  font-size: 12px;
+}
+.btn-login {
+  background-color: #cedc41;
+  color: #000000;
+  border-radius: 10px;
+}
+.text-label {
+  color: #ffffff;
+  font-size: 17px;
+  font-weight: bold;
+  padding: 0;
+  margin: 0 15px;
+}
+.forget-password {
+  color: #ffffff;
+  margin-left: 15px;
+  padding: 0;
+}

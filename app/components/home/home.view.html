@@ -1,157 +1,178 @@
-<link rel="stylesheet" href="components/home/foundation.css"/>
+<link rel="stylesheet" href="assets/css/home.style.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="http://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.js"></script>
+<script type="text/javascript" src="assets/js/vendor/foundation.min.js">
 
-<!-- mobile nav bar -->
-<div class="title-bar topbar-center-logo-mobile" data-responsive-toggle="topbar-center-logo" data-hide-for="medium">
-    <div class="title-bar-left">
-        <div class="title-bar-title"><img src="../../assets/img/logoSmall.png" alt=""/></div>
-    </div>
-    <div class="title-bar-right">
-        <button class="menu-icon" type="button" data-toggle="topbar-center-logo"></button>
-    </div>
-</div>
-<!-- /mobile nav bar -->
+</script>
+<!-- <script type="text/javascript" src="assets/js/sticky-footer.js"></script> -->
 
-<!-- medium and larger nav bar -->
-<div class="top-bar topbar-center-logo" id="topbar-center-logo">
-    <div class="top-bar-left">
-        <ul class="menu vertical medium-horizontal">
-            <li><a href="#">PRODUCTOS</a></li>
-            <li><a href="#">SUCURSALES</a></li>
-        </ul>
-    </div>
-    <div class="align-right top-bar-center">
-        <img id="brand-logo" src="../../assets/img/logo.png" alt=""/>
-    </div>
-    <div class="top-bar-right">
-        <ul class="menu vertical medium-horizontal">
-            <li><a href="#">CONTACTO</a></li>
-            <li><a href="#">PROMOCIONES</a></li>
-        </ul>
-    </div>
+<!-- Start Top Bar -->
+<!-- <div class="title-bar" data-responsive-toggle="example-menu" data-hide-for="medium">
+  <button class="menu-icon" type="button" data-toggle="example-menu"></button>
+  <div class="title-bar-title">Menu</div>
+</div> -->
+
+<div class="top-bar" id="example-menu">
+  <div class="top-bar-left">
+    <ul class="menu">
+      <li><a ui-sref="productCatalog">Productos</a></li>
+      <li><a ui-sref="location">Sucursales</a></li>
+    </ul>
+  </div>
+  <div class="top-bar-center">
+    <a ui-sref="home"><img src="assets/img/logo.png" alt="Company Logo" id="logo"></a>
+  </div>
+  <div class="top-bar-right">
+    <ul class="menu">
+      <li class="items"><a ui-sref="promotions">Promociones</a></li>
+      <li class="items"><a ui-sref="contact">Contacto</a></li>
+      <li class="items">
+          <a ui-sref="shoppingCart" class="icon"><i class="fa fa-shopping-cart fa-lg"></i></a>
+          <a ui-sref="signUp" class="icon"><i class="fa fa-user-circle fa-lg"></i></a>
+      </li>
+    </ul>
+  </div>
 </div>
-<!-- /medium and larger nav bar -->
+<!-- End Top Bar -->
 
 <div ui-view>
-    <!-- Carousel principal-->
-    <div class="orbit" role="region" aria-label="Favorite Space Pictures" data-orbit>
-        <ul class="orbit-container">
-            <button class="orbit-previous" aria-label="previous"><span class="show-for-sr">Previous Slide</span>&#9664;
-            </button>
-            <button class="orbit-next" aria-label="next"><span class="show-for-sr">Next Slide</span>&#9654;</button>
-            <li class="orbit-slide">
-
-                <div class="orbit-caption">
-                    <p id="id1"> La diferencia entre</p>
-                    <article id="rect1"></article>
-                    <article id="rect2"></article>
-                    <article id="rect3"></article>
-                    <article id="rect4"></article>
-                    <p id="id3"> QUERER</p>
-                    <p id="id2"> Y </p>
-                    <p id="id4"> PODER </p>
-
-                </div>
-                <img src="../../assets/img/home1610.jpg">
-            </li>
-            <li class="orbit-slide">
-                <img src="../../assets/img/promoHome.jpg">
-            </li>
-        </ul>
-    </div>
-
-    <!-- Finaliza carousel principal-->
-
-
-    <!-- fit Lovers-->
-    <div class="orbit">
-        <img src="../../assets/img/home2-1610.jpg">
-        <img class="hexDad hexBig" src="../../asse../../assets/img/bigHexagon.png">
-        <img class="hexDad hex1" src="../../asse../../assets/img/hexOne.png">
-        <img class="hexDad hex2" src="../../asse../../assets/img/hexTwo.png">
-        <img class="hexDad hex3" src="../../asse../../assets/img/hexThree.png">
-        <img class="hexDad hex4" src="../../asse../../assets/img/hexFour.png">
-        <img class="hexDad hex5" src="../../asse../../assets/img/hexFive.png">
-
-        <div class="">
-            <img id="repeatLogo" src="../../asse../../assets/img/logo.png">
+  <!--principal-->
+        <div class="callout">
+            <div class= "medium-6 columns medium-push-6"> </div>
+            <h2 class= "idDad" id= "id1"> La diferencia entre</h2>
+            <article class= "rectSizes" id= "rect1"></article>
+            <article  class= "rectSizes" id= "rect2"></article>
+            <article  class= "rectSizes" id= "rect3"></article>
+            <article  class= "rectSizes" id= "rect4"></article>
+            <p class= "idDad" id= "id3"> QUERER</p>
+            <p class= "idDad" id= "id2"> Y </p>
+            <p class= "idDad" id= "id4"> PODER </p>
+            <img src= "assets/img/home1610.jpg">
         </div>
-        <ul class="menu vertical">
-            <li>
-                <i id="moneyIcon" class="material-icons" style="font-size:60px;color:white;">attach_money</i>
-            </li>
-            <li>
-                <i id="shipIcon" class="material-icons" style="font-size:60px;color:white;">local_shipping</i>
-            </li>
-            <li>
-                <i id="gradeIcon" class="material-icons" style="font-size:60px;color:white;">grade</i>
-            </li>
+        <!--/principal-->
 
-        </ul>
+        <!--fit lovers-->
+        <div class="callout">
+            <div class= "hexDad orbit-image" id= "hexBig">
+                <img src= "assets/img/bigHexagon.png">
+            </div>
 
-        <ul class="menu vertical">
-            <li>
-                <h3 class="reasons ar1"> Precios accesibles </h3>
-            </li>
-            <li>
-                <h3 class="reasons ar2"> Envíos a todo México </h3>
+            <div class= "hexDad" id= "hex1">
+                <img src= "assets/img/hexOne.png">
+            </div>
 
-            </li>
-            <li>
-                <h3 class="reasons ar3"> Lorem Ipsum </h3>
-            </li>
-        </ul>
-        <button id="btnUbictn" class="button secondary"> CREAR CUENTA</button>
-    </div>
-    <!-- End fit Lovers-->
+            <div class= "hexDad" id= "hex2">
+                <img src= "assets/img/hexTwo.png">
+            </div>
 
+            <div class= "hexDad" id= "hex3">
+                <img src= "assets/img/hexThree.png">
+            </div>
 
-    <!-- Catalogo-->
-    <div class="orbit" role="region" aria-label="Favorite Space Pictures" data-orbit>
-        <ul class="orbit-container">
-            <button class="orbit-previous" aria-label="previous"><span class="show-for-sr">Previous Slide</span>&#9664;
-            </button>
-            <button class="orbit-next" aria-label="next"><span class="show-for-sr">Next Slide</span>&#9654;</button>
+            <div class= "hexDad" id= "hex4">
+                <img src= "assets/img/hexFour.png">
+            </div>
 
-            <li class="orbit-slide">
+            <div class= "hexDad" id= "hex5">
+                <img src= "assets/img/hexFive.png">
+            </div>
+            <!--/Hexagon images-->
 
-                <img src="../../assets/img/bckgrundCatalgo.jpg">
-                <div class="orbit-caption row">
-                    <div class="medium-6 columns medium-push-6">
-                        <ul class="menu vertical">
-                            <li>
-                                <h2> VISITA NUESTRO </h2>
-                            </li>
-                            <li>
-                                <h1 catlSiz> CATÁLOGO </h1>
-                            </li>
-                            <li>
-                                <button class="button primary"> Ir ahora</button>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="medium-6 columns medium-pull-6">
-                        <img src="../../assets/img/cataImage.png">
-                    </div>
+            <!--logo-->
+            <div id= "divLogo">
+                <img src= "assets/img/logo.png">
+            </div>
+            <!--/logo-->
+
+            <ul class= "menu vertical">
+                <li>
+                    <i id= "moneyIcon" class="material-icons" style="font-size:60px;color:white;">attach_money</i>
+                </li>
+                <li>
+                    <i id= "shipIcon" class="material-icons" style="font-size:60px;color:white;">local_shipping</i>
+                </li>
+                <li>
+                    <i id= "gradeIcon" class="material-icons" style="font-size:60px;color:white;">grade</i>
+                </li>
+            </ul>
+
+            <ul class="menu vertical">
+                <li>
+                    <h3 class= "reasons ar1"> Precios accesibles </h3>
+                </li>
+                <li>
+                    <h3 class= "reasons ar2"> Envíos a todo México </h3>
+
+                </li>
+                <li>
+                    <h3 class= "reasons ar3"> Entregas rápidas </h3>
+                </li>
+            </ul>
+            <div id="btnUbictn" class="row">
+              <div class="s">
+
+              </div>
+                <button id="btnCuenta" class="button expanded btn"> CREAR CUENTA </button>
+            </div>
+            <img src="assets/img/home2-1610.jpg">
+        </div>
+        <!--/fit lovers-->
+
+        <!--catalogue-->
+        <div class="promo-hero promo-hero-bg-image" id= "catalogue">
+            <div class="orbit-caption row">
+                <div class="medium-6 columns medium-push-6">
+                    <ul class="menu vertical" id="margin">
+                        <li>
+                            <h1>VISITA NUESTRO</h2>
+                        </li>
+                        <li>
+                            <h1>CATÁLOGO</h1>
+                        </li>
+                        <li>
+                            <a ui-sref="productCatalog"><button class="primary button expanded btn"> Ir ahora </button></a>
+                        </li>
+                    </ul>
                 </div>
-
-            </li>
-            <li class="orbit-slide">
-                <img src="http://placehold.it/2000x750">
-            </li>
-        </ul>
-    </div>
-
-    <div class="promo-hero promo-hero-bg-image">
-        <div class="promo-hero-content">
-            <h3 class="promo-hero-title">CONOCE NUESTRAS SUCURSALES</h3>
-            <p class="promo-hero-description hide-for-small-only">Lorem ipsum dolor sit amet, consectetur adipiscing
-                elit.
-                Nunc tortor ante, varius eget lacinia porta, faucibus ut eros. Donec quis dui id felis pharetra
-                fermentum.</p>
-            <div class="promo-hero-ctas">
-                <a href="#" class="promo-section-cta button white-hollow"> Ver m&aacute;s </a>
+                <div class="medium-6 columns medium-pull-6">
+                    <img src="assets/img/cataImage.png">
+                </div>
             </div>
         </div>
-    </div>
+        <!--/catalogue-->
+
+        <!--     Sucursals-->
+        <div class="promo-hero promo-hero-bg-image" id= "sucursals">
+            <div class="promo-hero-content">
+                <h3 class="promo-hero-title  colrFnt">CONOCE NUESTRAS SUCURSALES</h3>
+                <p class="promo-hero-description hide-for-small-only">Go Center es una empresa mexicana dedicada a la venta de suplementos alimenticios para atletas y deportistas.</p>
+                <div class="promo-hero-ctas">
+                    <a ui-sref="location" class="promo-section-cta button white-hollow btn"> Ver más </a>
+                </div>
+            </div>
+        </div>
+        <!--/Sucursals-->
 
 </div>
+
+<!-- Footer -->
+<footer class="row small-up-1 medium-up-5 expanded">
+    <div class="column">
+      <a href="#">Politica de privacidad</a>
+    </div>
+    <div class="column">
+      <a href="#">Terminos y Condiciones</a>
+    </div>
+    <div class="column column-logo">
+      <img class="footer-logo" src="assets/img/logo.png" alt="Logo">
+    </div>
+    <div class="column">
+      <a href="#">2017 Go Center Suplementos.</a>
+    </div>
+    <div class="column">
+      <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+      <a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+    </div>
+</footer>
+<!-- End Footer -->

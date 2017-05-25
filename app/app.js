@@ -4,7 +4,8 @@
 var app = angular.module('goCenter', [
     'ui.router',
     'ui.materialize',
-    'angularCSS'
+    'angularCSS',
+    'ngMap'
 ]);
 
 app.config(['$urlRouterProvider', '$stateProvider', '$locationProvider', function ($urlRouterProvider, $stateProvider, $locationProvider) {
@@ -29,7 +30,6 @@ app.config(['$urlRouterProvider', '$stateProvider', '$locationProvider', functio
         controller: 'adminProductManagerCtrl',
         parent: 'admin'
     }, adminPromotionManagerState = {
-
         name: 'adminPromotionManager',
         url: '/promotions',
         templateUrl: 'components/admin/promotionManager/admin.promotionManager.view.html',
@@ -39,35 +39,62 @@ app.config(['$urlRouterProvider', '$stateProvider', '$locationProvider', functio
         name: 'home',
         url: '/',
         templateUrl: './components/home/home.view.html',
+        controller: 'homeCtrl',
         css: './components/home/foundation.css'
     }, productCatalogState = {
         name: 'productCatalog',
         url: '/products',
-        templateUrl: 'components/productCatalog/productCatalog.view.html',
+        templateUrl: './components/productCatalog/productCatalog.view.html',
         controller: 'productCatalogCtrl',
         parent: 'home'
     }, productDetailsState = {
         name: 'productDetails',
-        url: '/product',
-        templateUrl: 'components/productDetails/productDetails.view.html',
+        url: '/product/:_id',
+        templateUrl: './components/productDetails/productDetails.view.html',
         controller: 'productDetailsCtrl',
         parent: 'home',
         css: 'assets/css/productDetails.style.css'
     }, contactState = {
         name: 'contact',
         url: '/contact',
-        templateUrl: 'components/contact/contact.view.html',
+        templateUrl: './components/contact/contact.view.html',
         controller: 'contactCtrl',
         parent: 'home',
         css: 'assets/css/contact.style.css'
     }, shoppingCartState = {
         name: 'shoppingCart',
         url: '/cart',
-        templateUrl: 'components/shoppingCart/shoppingCart.view.html',
+        templateUrl: './components/shoppingCart/shoppingCart.view.html',
         controller: 'shoppingCartCtrl',
         parent: 'home',
         css: 'assets/css/shoppingCart.style.css'
-    };
+    }, locationState = {
+        name: 'location',
+        url: '/sucursales',
+        templateUrl: './components/locations/location.view.html',
+        controller: 'locationCtrl',
+        parent: 'home',
+        css: 'assets/css/location.style.css'
+    }, promotionsState = {
+       name: 'promotions',
+       url: '/promociones',
+       templateUrl: './components/promotions/promotions.view.html',
+       controller: 'promotionsCtrl',
+       parent: 'home',
+       css: 'assets/css/promotions.style.css'
+    }, registerState = {
+       name: 'signUp',
+       url: '/registro',
+       templateUrl: './components/signUp/signUp.view.html',
+       controller: 'signUpCtrl',
+       parent: 'home'
+    }, loginState = {
+      name: 'login',
+      url: '/login',
+      templateUrl: './components/login/login.view.html',
+      controller: 'loginCtrl',
+      parent: 'signUp'
+    }
 
     $stateProvider.state(adminState);
     $stateProvider.state(adminOrderManagerState);
@@ -78,4 +105,8 @@ app.config(['$urlRouterProvider', '$stateProvider', '$locationProvider', functio
     $stateProvider.state(productDetailsState);
     $stateProvider.state(contactState);
     $stateProvider.state(shoppingCartState)
+    $stateProvider.state(locationState)
+    $stateProvider.state(promotionsState)
+    $stateProvider.state(registerState)
+    $stateProvider.state(loginState)
 }]);
