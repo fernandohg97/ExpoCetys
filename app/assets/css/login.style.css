@@ -1,12 +1,24 @@
-label {
-  padding: 0;
-  margin: 0 15px;
-  font-size: 12px;
+.section1 {
+  background-image: url("../img/fondo.registro.png");
+  background-size: 100% 100%;
 }
-.btn-login {
-  background-color: #cedc41;
-  color: #000000;
-  border-radius: 10px;
+.form-btn a {
+  background-color: transparent;
+  font-weight: bolder;
+  letter-spacing: 4px;
+  font-family: "Lato";
+  margin: 0;
+}
+.buttn:hover {
+  background-color: rgba(107, 43, 43, 0.60);
+}
+.form-btn {
+  background: red;
+  background: -webkit-linear-gradient(left, rgba(182, 55, 55, 0.88), rgba(79, 34, 34, 0.15));
+  background: -o-linear-gradient(right, rgba(182, 55, 55, 0.88), rgba(79, 34, 34, 0.15));
+  background: -moz-linear-gradient(right, rgba(182, 55, 55, 0.88), rgba(79, 34, 34, 0.15));
+  background: linear-gradient(to right, rgba(182, 55, 55, 0.88), rgba(79, 34, 34, 0.15));
+  width: 100%;
 }
 .text-label {
   color: #ffffff;
@@ -14,6 +26,25 @@ label {
   font-weight: bold;
   padding: 0;
   margin: 0 15px;
+}
+.registro {
+  width: 100%;
+}
+
+.formulario {
+    background: red; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(rgba(251, 251, 251, 0.10), whitesmoke); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(rgba(251, 251, 251, 0.10), whitesmoke); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(rgba(251, 251, 251, 0.10), whitesmoke); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(rgba(251, 251, 251, 0.10), whitesmoke); /* Standard syntax */
+    padding: 0;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.btn-login {
+  background-color: #cedc41;
+  color: #000000;
+  border-radius: 10px;
 }
 .forget-password {
   color: #ffffff;

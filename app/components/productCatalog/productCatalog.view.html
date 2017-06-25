@@ -1,6 +1,8 @@
 <link rel="stylesheet" href="assets/css/productCatalog.style.css">
 <!-- Section 1 -->
-
+<div>
+  <input ng-model="searchQuery" id="search-scroll" type="search" class="search-box-scroll" placeholder="Busca tu producto">
+</div>
 <div class="section1">
 <!-- Search Box -->
   <div class="row search-box">
@@ -16,29 +18,68 @@
 
 
 <!-- Section 2 -->
-<section class="row uncollapse section2">
+<section class="row section2">
 <!-- Vertical Menu -->
-<aside class="small-2 medium-2 large-2 columns filters">
+  <div class="small-2 columns categories">
+    <aside class="show-for-large filters">
+    <span><i class="fa fa-list-ul"></i>Categorias</span>
 
-<span><i class="fa fa-list-ul"></i>Categorias</span>
-
-<ul class="menu vertical">
-<li><a href="#">One</a></li>
-<li><a href="#">Two</a></li>
-<li><a href="#">Three</a></li>
-<li><a href="#">Four</a></li>
-<li><a href="#">Five</a></li>
-<li><a href="#">Six</a></li>
-<li><a href="#">Seven</a></li>
-<li><a href="#">Eight</a></li>
-</ul>
-</aside>
+    <ul class="menu vertical">
+    <li><a href="#">Aminoacidos</a></li>
+    <li><a href="#">BCAAs</a></li>
+    <li><a href="#">CLA</a></li>
+    <li><a href="#">L-Carnitina Capsulas</a></li>
+    <li><a href="#">L-Carnitina Liquida</a></li>
+    <li><a href="#">Creatina</a></li>
+    <li><a href="#">Glutamina</a></li>
+    <li><a href="#">Quemadores</a></li>
+    <li><a href="#">Precursor</a></li>
+    <li><a href="#">Multivitaminicos</a></li>
+    <li><a href="#">Ganadores de peso</a></li>
+    <li><a href="#">Omegas</a></li>
+    <li><a href="#">Proteinas</a></li>
+    </ul>
+    </aside>
+  </div>
 <!-- End Vertical Menu -->
 
 <!-- Catalog -->
-  <div class="small-10 medium-10 large-10 columns catalog">
-    <p class="title-catalog">Productos</p>
-    <div class="row small-up-2 medium-up-3 large-up-5">
+  <div class="small-11 medium-11 large-10 columns catalog">
+    <div class="row products-menu">
+      <div class="small-12 medium-9 large-9 columns">
+        <p class="title-catalog">Productos</p>
+      </div>
+      <div class="small-6 medium-6 large-3 columns">
+        <label class="select-menu">Ver por
+          <select>
+            <option value="Nuevo">Nuevo</option>
+            <option value="Popularidad">Popularidad</option>
+            <option value="Precio: Barato">Precio: Barato</option>
+            <option value="Precio: Caro">Precio: Caro</option>
+          </select>
+        </label>
+      </div>
+      <div class="small-6 medium-6 large-0 columns">
+        <label class="select-menu hide-for-large">Categorias
+          <select>
+            <option value="Aminoacidos">Aminoacidos</option>
+            <option value="BCAAs">BCAAs</option>
+            <option value="CLA">CLA</option>
+            <option value="L-Carnitina Capsulas">L-Carnitina Capsulas</option>
+            <option value="L-Carnitina Liquida">L-Carnitina Liquida</option>
+            <option value="Creatina">Creatina</option>
+            <option value="Glutamina">Glutamina</option>
+            <option value="Quemadores">Quemadores</option>
+            <option value="Precursor">Precursor</option>
+            <option value="Multivitaminicos">Multivitaminicos</option>
+            <option value="Omegas">Omegas</option>
+            <option value="Proteinas">Proteinas</option>
+            <option value="Ganadores de peso">Ganadores de peso</option>
+          </select>
+        </label>
+      </div>
+    </div>
+    <div class="row small-up-2 medium-up-3 large-up-5 productos">
       <div ng-repeat="product in catalog | filter:searchQuery" class="column column-block image">
         <a ui-sref="productDetails({_id: product._id})"><img src="assets/img/gsw.png" class="thumbnail" alt="Product cover"></a>
         <h5>{{product.name}}</h5>

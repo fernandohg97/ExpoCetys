@@ -16,9 +16,9 @@
         <p class="price">{{dataProduct.unitPrice | currency}}</p>
         <p class="product-servings">{{dataProduct.presentations[0].servings}} servings</p>
         <form class="quantity-products" action="/action_page.php">
-          <input type="number" name="quantity" min="1" max="100" step="1" value="1">
+          <input id="quantityProduct" type="number" name="quantity" min="1" max="100" step="1" value="1">
         </form>
-        <button type="button" class="alert button cart-button">
+        <button ng-click="addToShoppingCart(dataProduct.name, dataProduct.description, dataProduct.unitPrice, dataProduct.presentations[0].servings, dataProduct.presentations[0].discount.percentage)" type="button" class="alert button cart-button">
           <i class="fa fa-cart-arrow-down fa-lg" aria-hidden="true"></i>Anadir al carrito
         </button>
         <div class="details">
@@ -39,7 +39,9 @@
 
 <!-- Section2 -->
 <div class="section2">
-  <!-- <img src="assets/img/exlogo.png" class="small-logo" alt=""> -->
+  <figure>
+    <img src="assets/img/exlogo.png" class="small-logo" alt="Go Center Logo">
+  </figure>
   <div class="row small-up-1 medium-up-2 large-up-3 blocks">
     <p class="title2">Recomendado para ti</p>
     <div class="column column-block bloque">

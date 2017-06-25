@@ -10,6 +10,9 @@ body {
   height: 500px;
   position: relative;
 }
+.search-box-scroll {
+  display: none;
+}
 .search-box div label {
   text-align: center;
   font-size: 30px;
@@ -23,11 +26,14 @@ body {
   right: 0;
   left: 0;
 }
+.search-product {
+  /*background-color: white !important;*/
+}
 
 /* Section2 */
 .section2 {
   margin-top: 50px;
-  position: relative;
+  /*position: relative;*/
 }
 
 aside ul{
@@ -38,33 +44,48 @@ aside ul li a{
   font-size: 15px;
 }
 .filters span {
-  font-size: 18px;
-  font-weight: bolder;
+  font-size: 17px;
+  font-weight: bold;
 }
 .filters span i {
   margin-right: 10px;
   margin-bottom: 20px;
 }
-@media only screen and (min-width: 640px) and (max-width: 1024px) {
-  .filters span {
-    font-size: 16px;
-  }
+@media screen and (max-width: 1024px) {
 }
-@media only screen and (max-width: 640px) {
+@media screen and (min-width: 640px) and (max-width: 1024px) {
   .filters span {
     font-size: 14px;
   }
-.filters span i {
-  margin-right: 5px;
 }
+@media screen and (max-width: 640px) {
+  .filters span {
+    font-size: 11px;
+  }
+  .filters span i {
+    margin-right: 5px;
+  }
 }
 .title-catalog {
-  background-color: #cedc41;
-  letter-spacing: 10px;
-  margin-bottom: 30px;
-  padding-left: 30px;
+  display: inline-block;
+  letter-spacing: 7px;
   font-size: 40px;
+  margin-top: 5px;
+  margin-right: 0;
+  margin-bottom: 0;
+  font-weight: bold;
+}
+.products-menu {
+  background-color: #cedc41;
+}
+.select-menu {
+}
+.select-menu select {
+  display: block;
 }
 .thumbnail {
   background-color: #b1b1b1;
+}
+.productos {
+  margin-top: 20px;
 }

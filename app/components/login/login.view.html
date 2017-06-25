@@ -1,22 +1,29 @@
 <link rel="stylesheet" href="assets/css/login.style.css">
 
-<form class="contactForm" id="contact-form">
 
-      <label class="text-label">Correo electronico
-        <input ng-model="user.email" type="email" size="30" placeholder="Tu email" class="email-input">
-      </label>
+<div class="section1">
+  <div class="row expanded registro">
+    <div class="small-11 small-centered medium-6 medium-centered large-5 large-centered columns formulario">
+      <div class="expanded large button-group form-btn">
+        <a ui-sref="login" class="button buttn">INGRESAR</a>
+        <a ui-sref="signUp" class="button buttn">CREAR CUENTA</a>
+      </div>
 
+      <form class="contactForm" id="contact-form">
+        <label class="text-label">Correo electronico
+          <input ng-model="user.email" type="email" size="30" placeholder="Tu email" class="email-input">
+        </label>
+        <label class="text-label">Contrasena
+          <input ng-model="user.password" type="password" size="30" placeholder="Tu contrasena" class="password-input">
+        </label>
+        <a href="#" class="forget-password"><u>&iquest;Olvidaste la contrase&ntilde;a?</u></a>
+        <div class="row expanded boton">
+          <div class="small-6 small-centered text-center columns">
+            <button type="submit" class="button btn-login" name="button">Ingresar</button>
+          </div>
+        </div>
+      </form>
 
-
-      <label class="text-label">Contrasena
-        <input ng-model="user.password" type="password" size="30" placeholder="Tu contrasena" class="password-input">
-      </label>
-      <a href="#" class="forget-password"><u>&iquest;Olvidaste la contrase&ntilde;a?</u></a>
-
-
-  <div class="row expanded boton">
-    <div class="small-6 small-centered text-center columns">
-      <button type="submit" class="large button btn-login" name="button">Ingresar</button>
     </div>
   </div>
-</form>
+</div>

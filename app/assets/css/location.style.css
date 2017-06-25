@@ -1,56 +1,64 @@
-@import url('https://fonts.googleapis.com/css?family=Lato');
-body {
+/*@import url('https://fonts.googleapis.com/css?family=Lato');*/
+/*body {
     font-family: 'Lato', sans-serif;
-}
+}*/
 
-.icons {
-  width: 30px;
-  height: 30px;
-}
-.sucursal-map {
-  width: 100%;
-  height: 100%;
-}
+
+
 /*.map {
   width: 100%;
   height: 100%;
 }*/
+/*.section1 {
+  height: 90vh;
+}*/
+@media screen and (max-width: 39.9375em) {
+  .visitanos {
+    font-size: 30px;
+  }
+  .sucursal1 {
+    font-size: 25px;
+  }
+  .direccion, .direccion2, .direccion3, .direccion4 {
+    font-size: 15px;
+  }
+  .icons {
+    width: 20px;
+    height: 20px;
+  }
+}
+@media screen and (min-width: 40em) {
+  .icons {
+    width: 30px;
+    height: 30px;
+  }
+  .visitanos {
+    font-size: 60px;
+  }
+  .sucursal1 {
+    font-size: 40px;
+  }
+  .direccion, .direccion2, .direccion3, .direccion4 {
+    font-size: 20px;
+  }
+}
 .visitanos {
-    font-size: 300%;
     letter-spacing: 10px;
     text-align: center;
-    font-family: 'Lato', sans-serif;
 }
 
 .sucursal1 {
     color: #66ff33;
-    font-family: 'Lato', sans-serif;
     text-align: center;
-    font-size: 200%;
 }
 
 .sucursal {
     color: white;
     background-image: url("../img/fondorojo.png");
+    background-position: center;
+    background-size: cover;
 }
 
-.direccion {
+.direccion, .direccion2, .direccion3, .direccion4 {
     text-align: center;
-    font-size: 120%;
-		font-family: 'Lato', sans-serif;
-}
-.direccion2{
-	text-align: center;
-	font-size: 120%;
-	font-family: 'Lato', sans-serif;
-}
-.direccion3{
-	text-align: center;
-	font-size: 120%;
-	font-family: 'Lato', sans-serif;
-}
-.direccion4{
-	text-align: center;
-	font-size: 120%;
-	font-family: 'Lato', sans-serif;
 }

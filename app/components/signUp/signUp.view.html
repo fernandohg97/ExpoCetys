@@ -2,12 +2,11 @@
 
 <div class="section1">
 <div class="row expanded registro">
-  <div class="large-5 large-centered columns formulario">
+  <div class="small-11 small-centered medium-6 medium-centered large-5 large-centered columns formulario">
     <div class="expanded large button-group form-btn">
       <a ui-sref="login" class="button buttn">INGRESAR</a>
       <a ui-sref="signUp" class="button buttn">CREAR CUENTA</a>
     </div>
-    <div ui-view>
 
 
     <form class="contactForm" id="contact-form">
@@ -25,24 +24,23 @@
 
 
 
-          <label class="text-label">Correo electronico
+          <label class="text-label">Correo electrónico
             <input ng-model="user.email" type="email" size="30" placeholder="Tu email" class="email-input">
           </label>
 
 
 
-          <label class="text-label">Contrasena
+          <label class="text-label">Contraseña
             <input ng-model="user.password" type="password" size="30" placeholder="Tu contrasena" class="password-input">
           </label>
 
 
       <div class="row expanded boton">
         <div class="small-6 small-centered text-center columns">
-          <button ng-click="addUser()" type="submit" class="large button btn-signup" name="button">Crear Cuenta</button>
+          <button ng-click="addUser()" type="submit" class="button btn-signup" name="button">Crear cuenta</button>
         </div>
       </div>
     </form>
-  </div>
   </div>
 </div>
 </div>

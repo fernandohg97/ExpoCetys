@@ -1,0 +1,94 @@
+.section1 {
+  background-image: url("../img/fondo.png");
+  background-size: cover;
+}
+
+.form-title {
+  box-sizing: border-box;
+  padding: 12px;
+  width: 100%;
+  z-index: 1;
+}
+.form-title h3 {
+  color: #ffffff;
+  margin: 0 auto;
+  font-family: "Lato";
+  letter-spacing: 5px;
+}
+.formTitle {
+  background: red; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(left, rgba(182, 55, 55, 0.88), rgba(79, 34, 34, 0.15)); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(right, rgba(182, 55, 55, 0.88), rgba(79, 34, 34, 0.15)); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(right, rgba(182, 55, 55, 0.88), rgba(79, 34, 34, 0.15)); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to right, rgba(182, 55, 55, 0.88), rgba(79, 34, 34, 0.15)); /* Standard syntax */
+  padding: 10px;
+  margin-top: 20px;
+}
+
+.info, .credit-card{
+  background-color: rgba(196, 196, 190, 0.9);
+  padding: 0;
+}
+.info {
+  margin-top: 30px;
+}
+.address-info {
+  margin-top: 30px;
+}
+.credit-card {
+  margin-top: 30px;
+}
+.address {
+  background-color: rgba(196, 196, 190, 0.9);
+  padding: 0;
+}
+.info-title {
+  background-color: #cedc41;
+  padding: 0;
+}
+.info-title h5 {
+  padding: 4px 0 4px 3em;
+  letter-spacing: 3px;
+  margin: 0;
+}
+.info-user {
+  padding: 15px;
+  border: solid thin #999999;
+  border-top: none;
+}
+
+.menu-select {
+  display: block;
+}
+input {
+  background-color: white !important;
+  border: solid thin #999999 !important;
+}
+@media screen and (max-width: 39.9375em) {
+  .shipping-address {
+    margin-top: 15px;
+  }
+}
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: grey !important;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: grey !important;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: grey !important;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: grey !important;
+}
+.pay-order {
+  margin-top: 20px;
+}
+.pay-button {
+    background-color: #cedc41;
+    color: #000000;
+    border-radius: 10px;
+    margin: 0;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+}

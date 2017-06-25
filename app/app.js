@@ -93,7 +93,13 @@ app.config(['$urlRouterProvider', '$stateProvider', '$locationProvider', functio
       url: '/login',
       templateUrl: './components/login/login.view.html',
       controller: 'loginCtrl',
-      parent: 'signUp'
+      parent: 'home'
+    }, checkoutState = {
+      name: 'checkout',
+      url: '/checkout',
+      templateUrl: './components/checkout/checkout.view.html',
+      controller: 'checkoutCtrl',
+      parent: 'home'
     }
 
     $stateProvider.state(adminState);
@@ -109,4 +115,5 @@ app.config(['$urlRouterProvider', '$stateProvider', '$locationProvider', functio
     $stateProvider.state(promotionsState)
     $stateProvider.state(registerState)
     $stateProvider.state(loginState)
+    $stateProvider.state(checkoutState)
 }]);

@@ -1,9 +1,7 @@
-body {
+.section1 {
   background-image: url("../img/fondo.png");
   background-size: cover;
-  font-family: "Lato", sans-serif !important;
 }
-
 
 .formTitle {
   background: red; /* For browsers that do not support gradients */
@@ -12,11 +10,13 @@ body {
   background: -moz-linear-gradient(right, rgba(182, 55, 55, 0.88), rgba(79, 34, 34, 0.15)); /* For Firefox 3.6 to 15 */
   background: linear-gradient(to right, rgba(182, 55, 55, 0.88), rgba(79, 34, 34, 0.15)); /* Standard syntax */
   padding: 10px;
+  margin-top: 20px;
 }
 .form-title {
-  box-sizing: border-box;
-  margin-top: 40px;
-  padding: 12px;
+  width: 100%;
+  /*box-sizing: border-box;*/
+  /*margin-top: 40px;*/
+  /*padding: 12px;*/
 }
 .form-title h3 {
   color: #ffffff;
@@ -25,8 +25,12 @@ body {
   letter-spacing: 5px;
 }
 /* Table Products */
+.table-content {
+  /*height: 100%;*/
+  margin-top: 50px;
+}
 table {
-  margin-top: 30px;
+  /*margin-top: 30px;*/
 }
 th {
   background-color: #cedc41;
@@ -36,11 +40,16 @@ td img {
   margin: 0 auto;
   padding: 0;
 }
+tbody {
+  background: rgba(208, 208, 208, 0.8) !important;
+}
 .cart-product {
   width: 70px;
   height: 90px;
 }
-
+.button-group {
+  margin-top: 25px;
+}
 .btn-shop, .btn-pay {
   background-color: #cedc41;
   color: #000000;
@@ -49,9 +58,23 @@ td img {
   padding: 10px 20px;
 }
 
-.btn-pay {
-  margin-left: 20px;
+.btn-group div {
+  /*border: solid green;*/
 }
 .quantity-products {
   width: 50%;
+}
+.quantity-products input {
+  border: solid thin grey;
+  text-align: center;
+  background-color: whitesmoke;
+}
+.remove-item  {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+}
+.remove {
+  position: relative;
+  background: inherit;
 }
