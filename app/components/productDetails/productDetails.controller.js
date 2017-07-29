@@ -1,5 +1,6 @@
 'use strict'
 var cart = []
+
 app.controller('productDetailsCtrl', ['$scope', '$http', '$stateParams', function ($scope, $http, $stateParams) {
   $scope.productId = $stateParams._id
 
@@ -37,8 +38,13 @@ app.controller('productDetailsCtrl', ['$scope', '$http', '$stateParams', functio
     cart.push(a)
     localStorage.setItem('productos', JSON.stringify(cart))
     console.log(cart)
+    showNumberProducts()
   }
 
+  function showNumberProducts () {
+    var msgAdd = document.getElementById('msg-product')
+    msgAdd.style.display = 'block'
+  }
   // $scope.products = [
   //   {
   //     name: 'Whey Protein',

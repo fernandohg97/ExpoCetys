@@ -1,7 +1,6 @@
-body {
+.section1 {
   background-image: url("../img/fondo.png");
   background-size: cover;
-  font-family: "Lato", sans-serif;
 }
 
 /* Small only */
@@ -240,4 +239,14 @@ figure {
 }
 .column-block h5, .column-block p {
   text-align: center;
+}
+.msg-product {
+  width: 100px;
+  height: 20px;
+  background-color: 'red';
+  /*display: hidden;*/
+  top: 50%;
+  left: 50%;
+  right: 50%;
+  bottom: 50%;
 }

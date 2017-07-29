@@ -1,7 +1,8 @@
 <link rel="stylesheet" href="assets/css/home.style.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-<script src="http://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.js"></script>
+<link rel="stylesheet" href="assets/css/home.scss">
+<!-- <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> -->
+<!-- <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script> -->
+
 
 <!-- Start Top Bar -->
 <!-- <div class="title-bar" data-responsive-toggle="example-menu" data-hide-for="medium">
@@ -20,12 +21,20 @@
     <a ui-sref="home"><img src="assets/img/logo.png" alt="Company Logo" id="logo"></a>
   </div>
   <div class="top-bar-right">
-    <ul class="menu">
+    <ul class="dropdown menu rightMenu" data-dropdown-menu>
       <li class="items"><a ui-sref="promotions">Promociones</a></li>
       <li class="items"><a ui-sref="contact">Contacto</a></li>
       <li class="items">
           <a ui-sref="shoppingCart" id="shoppingCartIcon" class="icon"><i class="fa fa-shopping-cart fa-lg"></i></a>
-          <a ui-sref="signUp" class="icon"><i class="fa fa-user-circle fa-lg"></i></a>
+        </li>
+      <li class="items icon is-dropdown-submenu-parent pro">
+          <a href="#"><i class="fa fa-user-circle fa-lg"></i></a>
+          <ul class="menu subMenu">
+            <li><a ui-sref="signUp">Iniciar sesión</a></li>
+            <li><a ui-sref="account">Mi cuenta</a></li>
+            <li><a ui-sref="orders">Pedidos</a></li>
+            <li><a ui-sref="#">Cerrar sesión</a></li>
+          </ul>
       </li>
     </ul>
   </div>
@@ -155,10 +164,10 @@
 <!-- Footer -->
 <footer id="footer" class="row small-up-1 medium-up-5 expanded">
     <div class="column">
-      <a href="#">Politica de privacidad</a>
+      <a ui-sref="privacyPolicy">Política de privacidad</a>
     </div>
     <div class="column">
-      <a href="#">Terminos y Condiciones</a>
+      <a ui-sref="terms">Términos y Condiciones</a>
     </div>
     <div class="column column-logo">
       <img class="footer-logo" src="assets/img/logo.png" alt="Logo">

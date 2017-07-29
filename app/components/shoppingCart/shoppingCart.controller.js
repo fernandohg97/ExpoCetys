@@ -107,6 +107,7 @@ app.controller('shoppingCartCtrl', ['$scope', '$http', function ($scope, $http) 
       }
       details.push(order)
     }
+    // day/month/year
     var orderCreate = new Order(details, new Date(), new Date())
 
     $http.post('https://api-rest-js.herokuapp.com/api/orders', orderCreate)

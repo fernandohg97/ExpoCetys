@@ -1,0 +1,75 @@
+.section1 {
+  background-image: url("../img/fondo.png");
+  background-size: cover;
+}
+
+.form-title {
+  box-sizing: border-box;
+  padding: 12px;
+  width: 100%;
+  z-index: 1;
+}
+
+.form-title h3 {
+  color: #ffffff;
+  margin: 0 auto;
+  font-family: "Lato";
+  letter-spacing: 5px;
+}
+.formTitle {
+  background: red; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(left, rgba(182, 55, 55, 0.88), rgba(79, 34, 34, 0.15)); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(right, rgba(182, 55, 55, 0.88), rgba(79, 34, 34, 0.15)); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(right, rgba(182, 55, 55, 0.88), rgba(79, 34, 34, 0.15)); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to right, rgba(182, 55, 55, 0.88), rgba(79, 34, 34, 0.15)); /* Standard syntax */
+  padding: 10px;
+  margin-top: 20px;
+}
+
+img {
+  width: 120px;
+  height: 180px;
+}
+.order {
+  padding: 20px;
+  box-sizing: border-box;
+  margin-top: 20px;
+}
+
+.select-menu select {
+  display: block;
+}
+
+.date {
+  text-align: right;
+  font-size: 20px;
+  font-weight: bolder;
+  letter-spacing: 3px;
+}
+.media2, .media3 {
+  width: 50%;
+}
+.media2 p, .media3 p {
+  line-height: 80%;
+}
+.media3 .address {
+  line-height: normal;
+}
+.media2 h6, .media3 h6 {
+  font-weight: bold;
+}
+.media2 p, .media2 h6 {
+  margin-left: 20px;
+}
+.total, .subtotal {
+  color: rgb(78, 78, 78);
+  font-size: 16px;
+  font-weight: bold;
+  text-align: right;
+}
+
+.product {
+  border: solid black;
+  padding: 10px;
+  background-color: rgb(176, 176, 176) !important;
+}

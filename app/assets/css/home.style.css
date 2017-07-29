@@ -4,7 +4,7 @@
 /* Navigation Bar */
 .top-bar {
   background-color: #000000;
-  overflow: hidden;
+  /*overflow: hidden;*/
 }
 .no-js .top-bar {
   display: none;
@@ -40,7 +40,7 @@
   width: 45% !important;
   margin: 10px 0;
 }
-.top-bar-left ul li {
+.top-bar-left li {
   float: left;
   margin: 0 auto;
   width: 50%;
@@ -48,11 +48,15 @@
 }
 .top-bar-right ul .items {
   float: left;
-  width: 33.33%;
   margin: 0 auto;
   text-align: center;
 }
-
+.rightMenu li:nth-child(1), .rightMenu li:nth-child(2) {
+  width: 35%;
+}
+.rightMenu li:nth-child(3), .rightMenu li:nth-child(4) {
+  width: 15%;
+}
 .top-bar-center {
   width: 10%;
   display: inline-block;
@@ -60,7 +64,25 @@
 }
 
 /* Icon user */
-
+.subMenu li {
+  width: 100% !important;
+  padding: 10px 0;
+}
+.subMenu li a {
+  color: black !important;
+  text-decoration: none;
+  padding: 0;
+  margin: 0;
+  font-size: 15px !important;
+}
+.subMenu li:hover {
+  background-color: rgba(168, 168, 168, 0.67);
+}
+/*.subMenu {
+  width: 50%;
+  margin-left: 25%;
+  box-sizing: border-box;
+}*/
 
 /* Home */
 

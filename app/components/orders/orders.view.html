@@ -1,0 +1,51 @@
+<link rel="stylesheet" href="assets/css/orders.style.css">
+
+<!-- Section 1 -->
+<section class="section1">
+  <div class="expanded row form-title">
+    <div class="small-11 small-centered columns formTitle">
+      <h3 class="">Mis pedidos</h3>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="small-11 medium-4 columns">
+      <label class="select-menu">Buscar
+        <select id="opciones">
+          <option value="Todos los productos">Todos los productos</option>
+          <option value="Los ultimos 3 meses">Los ultimos 3 meses</option>
+          <option value="Los ultimos 6 meses">Los ultimos 6 meses</option>
+          <option value="Hace un año">Hace un año</option>
+        </select>
+      </label>
+    </div>
+  </div>
+
+  <div class="row order">
+    <div ng-repeat="order in orders"class="small-11 small-centered columns media-object stack-for-small product">
+      <div class="date">
+        {{ order.orderDate | date : format : mediumDate }}
+      </div>
+      <div class="media-object-section media1">
+        <figure>
+          <img src="assets/img/gsw.png" alt="Product images">
+        </figure>
+      </div>
+      <div class="media-object-section media2">
+        <h6>Detalles del producto</h6>
+        <p>{{order.details[0].product.name}}</p>
+        <p>Quantity: {{order.details[0].quantity}}</p>
+        <p>Precio unitario: {{ order.details[0].product.unitPrice | currency }}</p>
+      </div>
+      <div class="media-object-section media3">
+        <h6>Informacion del pago</h6>
+        <p>Nombre: Fernando Hernandez</p>
+        <p>Metodo de pago: VISA </p>
+        <p class="address">Direccion de envio: Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+        <p class="subtotal">Subtotal: {{ order.details[0].product.unitPrice * order.details[0].quantity | currency }}</p>
+        <p class="total">Total: {{ order.details[0].product.unitPrice * order.details[0].quantity | currency }}</p>
+      </div>
+    </div>
+  </div>
+
+</section>
