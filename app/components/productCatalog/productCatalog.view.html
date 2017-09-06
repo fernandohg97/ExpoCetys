@@ -81,7 +81,7 @@
         </div>
       </div>
       <div class="row small-up-2 medium-up-3 large-up-5 productos">
-        <div ng-repeat="product in catalog | filter:searchQuery | limitTo: 10" class="column column-block image">
+        <div ng-repeat="product in limitProducts | filter:searchQuery | limitTo: 5" class="column column-block image">
           <a ui-sref="productDetails({_id: product._id})"><img src="assets/img/gsw.png" class="thumbnail" alt="Product cover"></a>
           <h5>{{product.name}}</h5>
           <p>{{product.unitPrice | currency}}</p>
@@ -89,22 +89,16 @@
       </div>
     </div>
   <!-- End Catalog -->
+  </div>
+
 
     <div class="row">
-      <div class="small-12 small-centered columns">
-        <ul class="pagination text-center" role="navigation" aria-label="Pagination">
-          <li class="pagination-previous disabled">Previous</li>
-          <li class="current"><span class="show-for-sr">You're on page</span> 1</li>
-          <li><a href="#" aria-label="Page 2">2</a></li>
-          <li><a href="#" aria-label="Page 3">3</a></li>
-          <li><a href="#" aria-label="Page 4">4</a></li>
-          <li class="ellipsis"></li>
-          <li><a href="#" aria-label="Page 12">12</a></li>
-          <li><a href="#" aria-label="Page 13">13</a></li>
-          <li class="pagination-next"><a href="#" aria-label="Next page">Next</a></li>
-        </ul>
+      <div class="small-10 small-centered columns text-center">
+        <ul uib-pagination direction-links="false" boundary-links="true" total-items="totalItems" ng-model="currentPage" ng-change="pageChanged(currentPage)" max-size="numPages" previous-text="&lsaquo;" next-text="&rsaquo;" first-text="&laquo;" last-text="&raquo;"></ul>
       </div>
     </div>
-  </div>
+
+
+
 </section>
 <!-- End Section 2 -->

@@ -5,7 +5,8 @@ var app = angular.module('goCenter', [
   'ui.router',
   'ui.materialize',
   'angularCSS',
-  'ngMap'
+  'ngMap',
+  'ui.bootstrap'
 ]);
 
 app.config(['$urlRouterProvider', '$stateProvider', '$locationProvider', function ($urlRouterProvider, $stateProvider, $locationProvider) {

@@ -1,16 +1,25 @@
 <link rel="stylesheet" href="assets/css/home.style.css">
-<link rel="stylesheet" href="assets/css/home.scss">
+<link rel="stylesheet" type="text/css" href="assets/css/home.scss">
+<!-- <link rel="stylesheet" href="foundation.css"> -->
 <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> -->
 <!-- <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script> -->
 
 
 <!-- Start Top Bar -->
-<!-- <div class="title-bar" data-responsive-toggle="example-menu" data-hide-for="medium">
+<div class="title-bar" data-responsive-toggle="example-menu" data-hide-for="large">
   <button class="menu-icon" type="button" data-toggle="example-menu"></button>
   <div class="title-bar-title">Menu</div>
-</div> -->
+</div>
+<ul class="vertical menu hide-for-large menu-vert" id="example-menu" data-animate="hinge-in-from-top spin-out">
+  <li><a href="#">Productos</a></li>
+  <li><a href="#">Sucursales</a></li>
+  <li><a href="#">Promociones</a></li>
+  <li><a href="#">Contacto</a></li>
+  <li><a href="#">Carrito de compra</a></li>
+  <li><a href="#">Registrarse</a></li>
+</ul>
 
-<div class="top-bar" id="example-menu">
+<div class="top-bar show-for-large">
   <div class="top-bar-left">
     <ul class="menu">
       <li><a ui-sref="productCatalog">Productos</a></li>
@@ -181,3 +190,6 @@
     </div>
 </footer>
 <!-- End Footer -->
+<script type="text/javascript">
+  $(document).foundation();
+</script>

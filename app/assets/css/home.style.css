@@ -1,5 +1,4 @@
 /*Fonts*/
-@import url('https://fonts.googleapis.com/css?family=Lato');
 @import url('https://fonts.googleapis.com/css?family=Anton');
 /* Navigation Bar */
 .top-bar {
@@ -199,27 +198,27 @@ img{
 }
 
 /**************Slogan queries***************/
-@media only screen and (max-width: 1600px) {
+@media only screen and (min-width: 1600px) {
 
     #id1, #id2 { font-size: 187.5%; }
     #id3 { font-size: 562.5%; }
     #id4 { font-size: 618.75%; }
 }
 
-@media only screen and (max-width: 1280px) {
+@media only screen and (min-width: 1024px) {
 
     #id1, #id2 { font-size: 150%; }
     #id3 { font-size: 450%; }
     #id4 { font-size: 495%; }
 }
 
-@media only screen and (max-width: 768px) {
+@media screen and (min-width: 640px) and (max-width: 1023.99px) {
 
     #id1, #id2 { font-size: 90%; }
     #id3 { font-size: 270%; }
     #id4 { font-size: 297%; }
 }
-@media only screen and (max-width: 320px) {
+@media only screen and (max-width: 639.99px) {
 
     #id1, #id2 { font-size: 37.5%; }
     #id3 { font-size: 112.5%; }
